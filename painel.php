@@ -180,7 +180,7 @@ $password = $_REQUEST['password'];
                     case 'pedido' :
                         filtroPedido[column] = value;
                         var html = "<a onclick=\"desfiltrar('" + table + "','" + column + "')\">" + column + "=" + filtroPedido[column] + "</a>";
-                        $('#filtroPedido' + column).html(html);
+                        $('#filtroPedido' + column).html(html);                        
                         break;
                     case 'produto' :
                         filtroProduto[column] = value;
@@ -298,7 +298,7 @@ $password = $_REQUEST['password'];
                     <div id="filtroPedidoNumeroPedido"></div>
                     <div id="filtroPedidoCPF"></div>
                     <div id="filtroPedidoDtPedido"></div>
-                    <div id="filtroPedidoNomeProduto"></div>                    
+                    <div id="filtroPedidonomeProduto"></div>                    
                     <div id="filtroPedidoquantidade"></div>
                     <div id="filtroPedidovalorTotal"></div>
                     <div id="filtroPedidostatus"></div>
@@ -328,6 +328,7 @@ $password = $_REQUEST['password'];
                     <div id="filtroProdutocodBarras"></div>
                     <div id="filtroProdutonomeProduto"></div>
                     <div id="filtroProdutovalorUnitario"></div>
+                    
                     <p class="produto_page_top"></p>
                     <table class="contentproduto table table-striped">
 
@@ -371,9 +372,10 @@ $password = $_REQUEST['password'];
                     type: 'GET',
                     data: {
                         key: key,
-                        table: table
+                        table: table,
+                        filtro: getFiltro(table)
                     },
-                    success: function (tableSize) {
+                    success: function (tableSize) {                                                
                         var total = Number(1 + tableSize / maxPageSize - (tableSize / maxPageSize) % 1).toFixed(1);
 
                         $('.' + table + '_page_top,.' + table + '_page_bottom').bootpag({
