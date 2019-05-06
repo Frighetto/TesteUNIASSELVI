@@ -59,7 +59,7 @@ function getTableProduto() {
                 echo "<tr>";
                 echo "<td>" . $row['idProduto'] . "<button  onclick=\"filtrar('produto','idProduto','" . $row['idProduto'] . "')\" >/*</button></td>"
                 . "<td >" . $row['CodBarras'] . "<button onclick=\"filtrar('produto','codBarras','" . $row['CodBarras'] . "')\" >/*</button></td>"
-                . "<td ><a onclick=\"showPedido('nomeProduto', '" . $row['nomeProduto'] . "')\" class=\"nav-link\" id=\"pedidos-tab\" data-toggle=\"tab\" href=\"#pedidos\" role=\"tab\" aria-controls=\"pedidos\">" . $row['nomeProduto'] . "</a><button onclick=\"filtrar('produto','nomeProduto','" . $row['nomeProduto'] . "')\" >/*</button></td>"
+                . "<td ><a onclick=\"showPedido('NomeProduto', '" . $row['nomeProduto'] . "')\" class=\"nav-link\" id=\"pedidos-tab\" data-toggle=\"tab\" href=\"#pedidos\" role=\"tab\" aria-controls=\"pedidos\">" . $row['nomeProduto'] . "</a><button onclick=\"filtrar('produto','nomeProduto','" . $row['nomeProduto'] . "')\" >/*</button></td>"
                 . "<td >" . $row['valorUnitario'] . "<button onclick=\"filtrar('produto','valorUnitario','" . $row['valorUnitario'] . "')\" >/*</button></td>"
                 . "<td><button onclick=\"deletar('produto','" . $row['idProduto'] . "')\">Deletar</button></td>";
                 echo "</tr>";
