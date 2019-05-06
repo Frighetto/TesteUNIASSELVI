@@ -12,4 +12,4 @@ $dbname = "TesteUNIASSELVI";
 
 
 Para filtrar por item, clique no botão /* disponível em cada célula da tabela, para desfiltrar clique no item acima dos botões de paginação.
-Links entre os CRUDs listados encontram-se nos itens das celulas em azul.
+Links entre os CRUDs listados encontram-se nos itens das células em azul.
